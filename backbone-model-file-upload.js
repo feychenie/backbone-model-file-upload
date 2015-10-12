@@ -13,13 +13,13 @@
 
   // AMD
   if (typeof define === 'function' && define.amd) {
-    define(['underscore', 'backbone'], function(_, Backbone){
+    define(['lodash', 'backbone'], function(_, Backbone){
       factory(root, Backbone, _);
     });
 
   // NodeJS/CommonJS
   } else if (typeof exports !== 'undefined') {
-    var _ = require('underscore'), Backbone = require('backbone');
+    var _ = require('lodash'), Backbone = require('backbone');
     factory(root, Backbone, _);
 
   // Browser global
